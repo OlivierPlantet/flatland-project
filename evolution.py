@@ -37,8 +37,8 @@ if __name__ == '__main__':
     parser.add_argument('--log', help='log file', default='evolution.log', type=str)
     parser.add_argument('--weights', help='filename to save policy weights', default='weights', type=str)
     args = parser.parse_args()
-    logging.basicConfig(filename=args.log, encoding='utf-8', level=logging.DEBUG,
-                        format='%(asctime)s %(message)s')
+    logging.basicConfig(filename=args.log, level=logging.DEBUG,
+                        format='%(asctime)s %(message)s') #encoding='utf-8'?
 
     # starting point
     env, params = get_env(args.env)
